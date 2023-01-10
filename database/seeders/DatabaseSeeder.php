@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use Eloquent;
-use DB;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,19 +21,19 @@ class DatabaseSeeder extends Seeder
         $this->setFKCheckOff();
         $this->call([
             //MySettingSeeder::class,
-            CgySeeder::class,
-            TagSeeder::class,
-            UserSeeder::class,
-            ArticleSeeder::class,
-            CommentSeeder::class,
+            //CgySeeder::class,
+            //TagSeeder::class,
+            //UserSeeder::class,
+            //ArticleSeeder::class,
+            //CommentSeeder::class,
             //ElementSeeder::class,
             //PortfolioSeeder::class,
             //ContactSeeder::class,
-            ItemSeeder::class,
-            OrderSeeder::class,
+            //ItemSeeder::class,
+            //OrderSeeder::class,
             //MyDataTypeSeeder::class,
             //MyDataRowSeeder::class,
-           // MyMenuSeeder::class,
+            //MyMenuSeeder::class,
             //MyMenuItemSeeder::class,
             //MyPermissionSeeder::class,
             //MyRoleSeeder::class,

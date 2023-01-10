@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title','商店')
-    
+
 @section('content')
     <!-- Hero Area Start-->
     <div class="slider-area ">
@@ -24,7 +24,7 @@
             <div class="row product-btn justify-content-between mb-40">
                 <div class="properties__button">
                     <!--Nav Button  -->
-                    <nav>                                                      
+                    <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">NewestArrivals</a>
                             <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"> Price high to low</a>
@@ -55,6 +55,21 @@
                 <!-- card one -->
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row">
+                      {{--@foreach ($collection as $item)
+                      @if ($loop->first)
+                        $i = 3; //HTML結構
+                      @else
+                        $i = 5;
+                      @endif
+
+                      @php
+                        if($loop->first){
+                          $i = 3;
+                        }else{
+                          $i = 5;
+                        }
+                      @endphp
+                      {{ $i }}--}}
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                             <div class="single-popular-items mb-50 text-center">
                                 <div class="popular-img">
@@ -72,6 +87,8 @@
                                 </div>
                             </div>
                         </div>
+                      {{--@endforeach--}}
+
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                             <div class="single-popular-items mb-50 text-center">
                                 <div class="popular-img">
@@ -396,7 +413,7 @@
                             <h6>Secure Payment System</h6>
                             <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
                         </div>
-                    </div> 
+                    </div>
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-method mb-40">
                             <i class="ti-reload"></i>

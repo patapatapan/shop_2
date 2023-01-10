@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section-tittle mb-70">
-                        <h2>最新到貨</h2>
+                        <h2>不可以色色</h2>
                     </div>
                 </div>
             </div>
@@ -62,30 +62,31 @@
         </div>
     </section>
     <!--  New Product End -->
-    <!--? Gallery Area Start -->
+
+<!--? Gallery Area Start -->
     <div class="gallery-area">
         <div class="container-fluid p-0 fix">
             <div class="row">
                 <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6">
                     <div class="single-gallery mb-30">
-                        <div class="gallery-img big-img" style="background-image: url({{ asset('img/gallery/gallery1.png') }});"></div>
+                        <div class="gallery-img big-img" style="background-image: url({{ Voyager::image($images[0]->pic) }});"></div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                     <div class="single-gallery mb-30">
-                        <div class="gallery-img big-img" style="background-image: url({{ asset('img/gallery/gallery2.png') }});"></div>
+                        <div class="gallery-img big-img" style="background-image: url({{ Voyager::image($images[1]->pic) }});"></div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-12">
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
                             <div class="single-gallery mb-30">
-                                <div class="gallery-img small-img" style="background-image: url({{ asset('img/gallery/gallery3.png') }});"></div>
+                                <div class="gallery-img small-img" style="background-image: url({{ Voyager::image($images[2]->pic) }});"></div>
                             </div>
                         </div>
                         <div class="col-xl-12 col-lg-12  col-md-6 col-sm-6">
                             <div class="single-gallery mb-30">
-                                <div class="gallery-img small-img" style="background-image: url({{ asset('img/gallery/gallery4.png') }});"></div>
+                                <div class="gallery-img small-img" style="background-image: url({{ Voyager::image($images[3]->pic) }});"></div>
                             </div>
                         </div>
                     </div>
@@ -95,6 +96,9 @@
         </div>
     </div>
     <!-- Gallery Area End -->
+
+
+
     <!--? Popular Items Start -->
     <div class="popular-items section-padding30">
         <div class="container">
@@ -102,115 +106,34 @@
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-8 col-md-10">
                     <div class="section-tittle mb-70 text-center">
-                        <h2>Popular Items</h2>
-                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                        <h2>{{ $new_product_top->title }}</h2>
+                        <p>{{ $new_product_top->subtitle }}</p>
                     </div>
                 </div>
             </div>
             <div class="row">
+            @foreach ($products as $product)
+
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                     <div class="single-popular-items mb-50 text-center">
                         <div class="popular-img">
-                            <img src="{{ asset('img/gallery/popular1.png') }}" alt="">
+                            <img src="{{ Voyager::image($product->getFirstPic()) }}" alt="">
                             <div class="img-cap">
-                                <span>Add to cart</span>
+                                <span>這可以養嗎</span>
                             </div>
                             <div class="favorit-items">
                                 <span class="flaticon-heart"></span>
                             </div>
                         </div>
                         <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
+                            <h3><a href="product_details.html">{{$product->title}}</a></h3>
+                            <span>{{$product->price_og}}</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="{{ asset('img/gallery/popular2.png') }}" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="{{ asset('img/gallery/popular3.png') }}" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="{{ asset('img/gallery/popular4.png') }}" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="{{ asset('img/gallery/popular5.png') }}" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="{{ asset('img/gallery/popular6.png') }}" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            @endforeach
+
             <!-- Button -->
             <div class="row justify-content-center">
                 <div class="room-btn pt-70">
@@ -279,27 +202,15 @@
         <div class="container">
             <div class="method-wrapper">
                 <div class="row d-flex justify-content-between">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
+                  @foreach ($reds as $item)
+                      <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-method mb-40">
                             <i class="ti-package"></i>
-                            <h6>Free Shipping Method</h6>
-                            <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                            <h6>{{ $item->title }}</h6>
+                            <p>{!! $item->subtitle !!}</p>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="single-method mb-40">
-                            <i class="ti-unlock"></i>
-                            <h6>Secure Payment System</h6>
-                            <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
-                        </div>
-                    </div> 
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="single-method mb-40">
-                            <i class="ti-reload"></i>
-                            <h6>Secure Payment System</h6>
-                            <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
-                        </div>
-                    </div>
+                      </div>
+                  @endforeach
                 </div>
             </div>
         </div>
